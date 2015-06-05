@@ -1,21 +1,81 @@
-@import '../bower_components/bourbon/app/assets/stylesheets/bourbon';
-@import '../bower_components/neat/app/assets/stylesheets/neat';
+@import url('http://fonts.googleapis.com/css?family=Roboto:400,700');
+
+@import 'typography.scss';
+@import 'characters.scss';
+@import 'opponents.scss';
 
 // Typography
-$base-font-family: $helvetica;
+$font: 'Roboto', sans-serif;
 
 // Colors
-$blue: #477dca;
-$dark-gray: #333;
-$medium-gray: #999;
-$light-gray: #ddd;
-$very-light-gray: #fafafa;
+$red: #a93635;
+$light-red: #cd484c;
+$teal: #40b194;
+$light-teal: #b3e0d4;
+$dark-gray:  #3D3D3D;
+$medium-gray: #9C9C9C;
+$light-gray: #F0F0F0;
 
-$base-font-color: $dark-gray;
-$base-background-color: $very-light-gray;
+
+$base-font-color: $red;
+$base-background-color: $dark-gray;
 
 body {
-  font-family: $base-font-family;
-  background-color: $base-background-color;
-  color: $base-font-color;
+  font-family: 'Roboto', sans-serif;
+  background-color: $light-gray;
+  color: $red;
+}
+
+img {
+  border: 2px solid $dark-gray;
+  border-radius: 4px;
+}
+
+.health-container{
+  width: 250px;
+  margin: 25px;
+  border-radius: 4px;
+  background-color: $red;
+}
+
+.health{
+  display: block;
+  width: 220px;
+  height: 50px;
+  border-radius: 4px;
+  background-color: $teal;
+}
+
+button {
+  display: block;
+  width: 250px;
+  height: 50px;
+  border-radius:4px;
+  border:none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  cursor:pointer;
+  transition:0.1s all ease;
+  border-bottom: 1px solid #ccc;
+  background: $light-red;
+  border-bottom: 2px solid $red;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
+}
+
+.attack{
+  font-size : 32px;
+  font-weight: 300;
+  color: $dark-gray;
+}
+
+button:active,
+.attack:active{
+  top: 0px;
+  border: 2px solid $red;
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.15);
+}
+
+button:focus,
+.attack:focus{
+  outline: 0;
 }
