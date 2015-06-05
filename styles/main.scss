@@ -1,6 +1,8 @@
-@import '../bower_components/bourbon/app/assets/stylesheets/bourbon';
-@import '../bower_components/neat/app/assets/stylesheets/neat';
 @import url('http://fonts.googleapis.com/css?family=Roboto:400,700');
+
+@import 'typography.scss';
+@import 'characters.scss';
+@import 'opponents.scss';
 
 // Typography
 $font: 'Roboto', sans-serif;
@@ -25,8 +27,6 @@ body {
 }
 
 img {
-  display: inline-block;
-  width: 250px;
   border: 2px solid $dark-gray;
   border-radius: 4px;
 }
@@ -35,7 +35,7 @@ img {
   width: 250px;
   margin: 25px;
   border-radius: 4px;
-  background-color: #a93635;
+  background-color: $red;
 }
 
 .health{
@@ -43,7 +43,7 @@ img {
   width: 220px;
   height: 50px;
   border-radius: 4px;
-  background-color: #40b194;
+  background-color: $teal;
 }
 
 button {
@@ -53,27 +53,29 @@ button {
   border-radius:4px;
   border:none;
   font-family: 'Roboto', sans-serif;
+  font-weight: 400;
   cursor:pointer;
   transition:0.1s all ease;
-  font-size : 32px;
-  font-weight: 300;
-  color: #333;
   border-bottom: 1px solid #ccc;
-  box-shadow:0px 0px 0px 0px #B8B8B8;
-}
-
-.attack{
   background: $light-red;
   border-bottom: 2px solid $red;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
 }
 
+.attack{
+  font-size : 32px;
+  font-weight: 300;
+  color: $dark-gray;
+}
+
+button:active,
 .attack:active{
   top: 0px;
   border: 2px solid $red;
   box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.15);
 }
 
+button:focus,
 .attack:focus{
   outline: 0;
 }
