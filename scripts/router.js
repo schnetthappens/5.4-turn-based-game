@@ -12,22 +12,28 @@ window.Game = window.Game || {};
             'win': 'win',
             'lose': 'lose'
         },
+        playerVar: function() {
+            return localStorage.getItem('player');
+        },
+        opponentVar: function(){
+            return localStorage.getItem('opponent')
+        },
         index: function(){
             $('.application').html(JST['container']());
             $('.character').append(JST['player']());
         },
         opponent: function(){
-            var player = localStorage.getItem("player");
+
             $('.application').html(JST['opponent']({
-                'player': player
+                'player': this.playerVar()
             }));
         },
         play: function () {
-            var player =localStorage.getItem("player");
-            var villain = localStorage.getItem("villain");
+
+            //var opponent = this.opponentVar();
             $('.application').html(JST['play']({
-                'player': player,
-                'villain': villain
+                'player':this.playerVar(),
+                'opponent': this.opponentVar()
             }));
 
         },
