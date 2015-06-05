@@ -1,0 +1,34 @@
+@import url('http://fonts.googleapis.com/css?family=Roboto:400,700');
+
+// Typography
+$font: 'Roboto', sans-serif;
+
+// Colors
+$red: #a93635;
+$light-red: #cd484c;
+$teal: #40b194;
+$light-teal: #b3e0d4;
+$dark-gray:  #3D3D3D;
+$medium-gray: #9C9C9C;
+$light-gray: #F0F0F0;
+
+
+.pick-villain{
+  display: inline-block;
+  width: 250px;
+}
+
+#joffrey,
+#the-hound-008{
+  margin: 0 25px 0 0;
+}
+
+#the-mountain{
+  margin: 0 0 0 0;
+}
+
+#joffrey:hover,
+#the-hound:hover,
+#the-mountain:hover{
+  border: 2px solid $red;
+}
