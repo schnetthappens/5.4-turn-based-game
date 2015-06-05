@@ -31,13 +31,14 @@ window.Game = window.Game || {};
         play: function () {
             var player = this.playerVar();
             var opponent = this.opponentVar();
-            var currentPlayer = new Character(player);
-            //var opponent = this.opponentVar();
+            Game.currentPlayer = new Game.Character();
+            Game.opponentPlayer = new Game.Opponent();
             $('.application').html(JST['play']({
                 'player':player,
                 'opponent': opponent
             }));
-           alert(currentPlayer.name);ç
+           console.log("current player:",Game.currentPlayer.health);
+            //console.log(opponentPlayer.health)
 
         },
         win: function () {
@@ -47,6 +48,6 @@ window.Game = window.Game || {};
 
         }
 
-    })
+    });
     Game.router= new Game.GameRouter();
 })();

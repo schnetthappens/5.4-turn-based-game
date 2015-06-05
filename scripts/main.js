@@ -7,7 +7,7 @@ window.Game = window.Game || {};
 
   $(document).ready(function(){
     Backbone.history.start();
-    //t
+
     $(document).on('click','.pick-player', function(e){
       e.preventDefault();
       player = e.target.id;
