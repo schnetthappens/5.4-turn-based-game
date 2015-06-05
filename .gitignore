@@ -1,4 +1,6 @@
 .DS_Store
-bower_components
+
 node_modules
 .sass-cache
+.idea/
+images/background/the_alps_36933-1600x1200.jpg
