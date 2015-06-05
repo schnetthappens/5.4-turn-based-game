@@ -5,7 +5,4 @@ window.Game = window.Game || {};
 (function(){
     Game.vent = _.extend({},Backbone.Events);
 
-    Game.vent.on("say:hi",function() {
-        alert("FIGHT!")
-    });
 })();

@@ -29,12 +29,15 @@ window.Game = window.Game || {};
             }));
         },
         play: function () {
-
+            var player = this.playerVar();
+            var opponent = this.opponentVar();
+            var currentPlayer = new Character(player);
             //var opponent = this.opponentVar();
             $('.application').html(JST['play']({
-                'player':this.playerVar(),
-                'opponent': this.opponentVar()
+                'player':player,
+                'opponent': opponent
             }));
+           alert(currentPlayer.name);ç
 
         },
         win: function () {

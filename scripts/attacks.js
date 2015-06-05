@@ -4,4 +4,7 @@
 window.Game = window.Game || {};
 (function(){
 
+    Game.vent.on("say:hi",function() {
+        alert("FIGHT!")
+    });
 })();

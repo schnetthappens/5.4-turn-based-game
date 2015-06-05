@@ -3,5 +3,9 @@
  */
 window.Game = window.Game || {};
 (function(){
+    function Character (name){
+        this.name= name
+    }
+
 
 })();

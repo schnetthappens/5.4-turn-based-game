@@ -22,12 +22,9 @@ window.Game = window.Game || {};
     });
     $(document).on('click','.attack', function(e){
       e.preventDefault();
-      console.log(e);
       Game.vent.trigger("say:hi");
     })
   });
 
-  //Game.vent.on("say:hi",function(){
-  //  alert("FIGHT!")
-  //});
+
 })();
