@@ -29,7 +29,7 @@ window.Game = window.Game || {};
             }));
         },
         play: function () {
-            var player = this.playerVar();
+          var player = this.playerVar();
             var opponent = this.opponentVar();
             Game.currentPlayer = new Game.Character();
             Game.opponentPlayer = new Game.Opponent();
@@ -41,13 +41,14 @@ window.Game = window.Game || {};
             //console.log(opponentPlayer.health)
 
         },
-        win: function () {
+        win: function(){
+          $('.application').html(JST['win'])
 
         },
         lose: function(){
-
+          $('.application').html(JST['lose'])
         }
 
-    });
+    })
     Game.router= new Game.GameRouter();
 })();
