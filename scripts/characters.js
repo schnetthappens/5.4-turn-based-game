@@ -3,23 +3,24 @@
  */
 window.Game = window.Game || {};
 (function(){
-  function Character(){
-    attack: Math.random();
-    health: 10;
+
+  Game.Character = function(){
+    this.attack = function(){return Math.random()};
+    this.health= 10;
   }
 
-  var orange = new Character();
-  var grey = new Character();
-  var white = new Character();
+  //var orange = new Character();
+  //var grey = new Character();
+  //var white = new Character();
 
-  function Opponent(){
-    attack: Math.random();
-    health: 10;
+ Game.Opponent = function(){
+    this.attack = function(){return Math.random()};
+    this.health = 10;
   }
 
-  var theHound = new Opponent();
-  var theMountain = new Opponent();
-  var joffrey = new Opponent();
+  //var theHound = new Opponent();
+  //var theMountain = new Opponent();
+  //var joffrey = new Opponent();
 
 })();
 

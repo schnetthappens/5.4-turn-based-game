@@ -29,12 +29,16 @@ window.Game = window.Game || {};
             }));
         },
         play: function () {
-
-            //var opponent = this.opponentVar();
+            var player = this.playerVar();
+            var opponent = this.opponentVar();
+            Game.currentPlayer = new Game.Character();
+            Game.opponentPlayer = new Game.Opponent();
             $('.application').html(JST['play']({
-                'player':this.playerVar(),
-                'opponent': this.opponentVar()
+                'player':player,
+                'opponent': opponent
             }));
+           console.log("current player:",Game.currentPlayer.health);
+            //console.log(opponentPlayer.health)
 
         },
         win: function () {
@@ -44,6 +48,6 @@ window.Game = window.Game || {};
 
         }
 
-    })
+    });
     Game.router= new Game.GameRouter();
 })();
