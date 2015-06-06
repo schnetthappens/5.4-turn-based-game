@@ -4,3 +4,4 @@
  [ ] Create bare bones HTML for each screen
  [ ] Investigate and setup routing
  [ ] Each team member get familiar with Trello
+ [ ] Setup staging branch
