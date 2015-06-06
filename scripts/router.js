@@ -23,7 +23,6 @@ window.Game = window.Game || {};
             $('.character').append(JST['player']());
         },
         opponent: function(){
-
             $('.application').html(JST['opponent']({
                 'player': this.playerVar()
             }));
@@ -42,11 +41,16 @@ window.Game = window.Game || {};
 
         },
         win: function(){
-          $('.application').html(JST['win'])
-
+          var player = this.playerVar();
+          $('.application').html(JST['win']({
+            'player':player
+          }));
         },
         lose: function(){
-          $('.application').html(JST['lose'])
+          var opponent = this.opponentVar();
+          $('.application').html(JST['lose']({
+            'opponent': opponent
+          }));
         }
 
     })
