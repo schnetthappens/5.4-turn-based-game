@@ -7,7 +7,7 @@ window.Game = window.Game || {};
 
   $(document).ready(function(){
     Backbone.history.start();
-    //t
+
     $(document).on('click','.pick-player', function(e){
       e.preventDefault();
       player = e.target.id;
@@ -22,12 +22,9 @@ window.Game = window.Game || {};
     });
     $(document).on('click','.attack', function(e){
       e.preventDefault();
-      console.log(e);
       Game.vent.trigger("say:hi");
     })
   });
 
-  //Game.vent.on("say:hi",function(){
-  //  alert("FIGHT!")
-  //});
+
 })();
