@@ -23,13 +23,12 @@ window.Game = window.Game || {};
             $('.character').append(JST['player']());
         },
         opponent: function(){
-
             $('.application').html(JST['opponent']({
                 'player': this.playerVar()
             }));
         },
         play: function () {
-            var player = this.playerVar();
+          var player = this.playerVar();
             var opponent = this.opponentVar();
             Game.currentPlayer = new Game.Character();
             Game.opponentPlayer = new Game.Opponent();
@@ -41,13 +40,19 @@ window.Game = window.Game || {};
             //console.log(opponentPlayer.health)
 
         },
-        win: function () {
-
+        win: function(){
+          var player = this.playerVar();
+          $('.application').html(JST['win']({
+            'player':player
+          }));
         },
         lose: function(){
-
+          var opponent = this.opponentVar();
+          $('.application').html(JST['lose']({
+            'opponent': opponent
+          }));
         }
 
-    });
+    })
     Game.router= new Game.GameRouter();
 })();

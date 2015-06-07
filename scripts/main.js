@@ -14,16 +14,23 @@ window.Game = window.Game || {};
       localStorage.setItem("player",player);
       Game.router.navigate('opponent',{trigger:true});
     });
+
     $(document).on('click','.pick-opponent', function (e){
       e.preventDefault();
       opponent = e.target.id;
       localStorage.setItem("opponent",opponent);
       Game.router.navigate('play',{trigger:true});
     });
+
     $(document).on('click','.attack', function(e){
       e.preventDefault();
       Game.vent.trigger("say:hi");
     })
+
+    $(document).on('click', '.play-again-btn', function(e){
+      Game.router.navigate('', {trigger: true});
+    })
+
   });
 
 
