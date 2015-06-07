@@ -5,6 +5,7 @@ window.Game = window.Game || {};
 (function(){
 
     Game.vent.on("say:hi", function(){
+      $('.fighters').toggleClass('active');
         if (Game.opponentPlayer.health >1){
             Game.opponentHealthWidth = Game.opponentPlayer.health -= Game.currentPlayer.attack();
             Game.vent.trigger('opponent:hit');
@@ -31,4 +32,6 @@ window.Game = window.Game || {};
         }else Game.router.navigate('lose',{trigger:true});
         console.log('player health', Game.currentPlayer.health);
     };
+
+
 })();

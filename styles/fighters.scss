@@ -19,6 +19,23 @@ $base-background-color: $dark-gray;
 
 .fighters{
   padding: 0 100px;
+  margin-top: 30px;
+}
+
+@-webkit-keyframes wiggle {
+0% {
+  -webkit-transform:rotate(4deg);
+}
+50% {
+  -webkit-transform:rotate(-4deg);
+}
+100% {
+  -webkit-transform:rotate(4deg);
+}
+}
+
+.fighters.active {
+  -webkit-animation: wiggle 0.2s;
 }
 
 .fighters img {
@@ -27,9 +44,19 @@ $base-background-color: $dark-gray;
   border-radius: 4px;
 }
 
+.fight-message {
+  margin-top: 50px;
+}
+
 //health status bars
 .health-status-bars{
   padding: 0 100px;
+}
+
+.health-status {
+  display: inline-block;
+  padding-left: 20px;
+  margin-bottom: 0;
 }
 
 .health-container{
