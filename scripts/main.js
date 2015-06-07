@@ -25,11 +25,9 @@ window.Game = window.Game || {};
     $(document).on('click','.attack', function(e){
       e.preventDefault();
       Game.vent.trigger("say:hi");
-    })
+    });
 
-    $(document).on('click', '.play-again-btn', function(e){
-      Game.router.navigate('', {trigger: true});
-    })
+
 
   });
 
