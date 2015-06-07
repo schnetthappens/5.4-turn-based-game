@@ -1,0 +1,54 @@
+@import url('http://fonts.googleapis.com/css?family=Roboto:300,400,700');
+
+
+// Typography
+$font: 'Roboto', sans-serif;
+
+// Colors
+$red: #a93635;
+$light-red: #cd484c;
+$teal: #40b194;
+$light-teal: #b3e0d4;
+$dark-gray:  #3D3D3D;
+$medium-gray: #9C9C9C;
+$light-gray: #F0F0F0;
+
+
+$base-font-color: $red;
+$base-background-color: $dark-gray;
+
+.fighters{
+  padding: 0 100px;
+}
+
+.fighters img {
+  margin: 25px 25px 0 25px;
+  border: 2px solid $dark-gray;
+  border-radius: 4px;
+}
+
+//health status bars
+.health-status-bars{
+  padding: 0 100px;
+}
+
+.health-container{
+  display: inline-block;
+  width: 254px;
+  margin: 25px;
+  border-radius: 4px;
+  background-color: $red;
+  box-shadow: inset -1px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.health{
+  height: 50px;
+  border-radius: 4px;
+  background-color: $teal;
+  background-image: linear-gradient(#7eddc4  0%,$teal 100%);
+}
+
+.char-health,
+.opp-health {
+  width: attr(data-health);
+}
