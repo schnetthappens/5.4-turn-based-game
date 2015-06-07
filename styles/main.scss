@@ -88,6 +88,15 @@ button:focus{
   color: $dark-gray;
 }
 
+.winner,
+.loser {
+  margin-top: 50px;
+}
+
+.container img {
+  margin-top: 30px;
+}
+
 .play-again-btn{
   margin-top:20px;
   background: $teal;
